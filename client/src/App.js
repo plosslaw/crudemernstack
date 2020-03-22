@@ -105,7 +105,7 @@ class App extends React.Component{
     }
 
     renderEmployeeTable(){
-        if(this.state.employees.length>0){
+        if(this.state.employees.length > 0){
             return (
                 <EmployeeTable employees={this.state.employees}
                             deleteHandler={this.deleteHandler}

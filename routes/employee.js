@@ -11,7 +11,7 @@ employeeRouter.get('/', (req,res)=>{
                 msgError: true
             }})
         }else{
-            res.status(200).json(response)
+            res.status(200).json({response})
         }
     })
 })
