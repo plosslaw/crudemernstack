@@ -91,7 +91,7 @@ class App extends React.Component{
 
     async addHandler(e){
         e.preventDefault()
-        const postData = await EmployeeAPI.craeteEmployee(this.state.employee)
+        const postData = await EmployeeAPI.createEmployee(this.state.employee)
         const message = postData.message
         if(message.msgError){
             this.setState({message})
