@@ -14,8 +14,7 @@ if(process.env.NODE_ENV === 'production'){
         res.sendFile(path.join(__dirname,'client','build','index.html'))
     })
 }
-
-
+// process.env.mongodb << indicates the key to be used to identify process
 const uri = process.env.mongodb || 'mongodb://localhost:27017/crud-app'
 mongoose.connect(uri, {
     useNewUrlParser: true,
@@ -35,3 +34,5 @@ const port = process.env.PORT || 5000;
 app.listen(port,()=>{
     console.log('app is running')
 })
+
+//HbSZXBLellm9i8g3

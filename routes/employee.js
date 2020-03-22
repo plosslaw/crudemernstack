@@ -7,7 +7,7 @@ employeeRouter.get('/', (req,res)=>{
     Employee.find({}, (err,response)=>{
         if(err){
             res.status(500).json({message:{
-                msgBody: "Unable to get employee",
+                msgBody: "Unable to get employees",
                 msgError: true
             }})
         }else{
@@ -17,7 +17,7 @@ employeeRouter.get('/', (req,res)=>{
 })
 
 //create
-employeeRouter.post('/',(req,res=>{
+employeeRouter.post('/',(req,res)=>{
     const employee = new Employee(req.body)
     employee.save((err,doc)=>{
         if(err){
