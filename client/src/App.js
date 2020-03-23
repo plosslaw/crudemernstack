@@ -13,7 +13,7 @@ class App extends React.Component{
             isEditForm: false,
             employee: {
                 firstName: "",
-                LastName: "",
+                lastName: "",
                 salary: "",
                 job: ""
             },
@@ -37,7 +37,7 @@ class App extends React.Component{
         this.setState({
             employee:{
                 firstName: "",
-                LastName: "",
+                lastName: "",
                 salary: "",
                 job: ""
             }

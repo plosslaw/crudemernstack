@@ -12,7 +12,7 @@ const EmployeeTableRow = (props)=>{
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" onClick={props.showEditForm.bind(this, props.employee)} className="btn btn-secondary">Edit</button>
-                    <button type="button" onClick={props.deleteHandler.bind(this, _id)} className="btn btn-dange">Delete</button>
+                    <button type="button" onClick={props.deleteHandler.bind(this, _id)} className="btn btn-danger">Delete</button>
                 </div>
             </td>
         </tr>

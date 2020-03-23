@@ -1,9 +1,3 @@
-
-
-
-
-
-
 export default{
     getEmployees: ()=>{
         return fetch('/employee')
