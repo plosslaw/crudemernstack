@@ -55,7 +55,7 @@ employeeRouter.delete('/:id',(req,res)=>{
 
 //update
 employeeRouter.put('/:id', (req,res)=>{
-    Employee.findByIdAndUpdate(req.params.id, req.body,{runValidators:true},(err)=>{
+    Employee.findOneAndUpdate({_id : req.params.id}, req.body,{runValidators:true},(err,response)=>{
         if(err){
             res.status(500).json({message:{
                 msgBody: "Unable to update employee",

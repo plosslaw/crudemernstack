@@ -14,10 +14,6 @@ const EmployeeSchema = new Schema({
         type: String,
         required: true
     },
-    job:{
-        type: String,
-        required: true
-    },
     salary:{
         type: Number,
         required: true
