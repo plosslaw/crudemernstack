@@ -1,6 +1,6 @@
 export default{
     getEmployees: ()=>{
-        return fetch('/employees')
+        return fetch('/employee')
             .then(res => res.json())
             .then(data=>data)
     },
