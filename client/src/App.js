@@ -4,6 +4,8 @@ import Form from './components/Form'
 import Message from './components/Message'
 import EmployeeAPI from './EmployeeAPI'
 
+//todo: make modal warning when deleting entry
+
 
 class App extends React.Component{
     constructor(props){

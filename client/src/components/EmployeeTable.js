@@ -18,10 +18,9 @@ class EmployeeTable extends React.Component{
             overflowY: "scroll",
             width:"100%",
             maxHeight:"400px",
-            fontSize: "1rem"
         }
         return(
-            <div style={tableWrapper}>
+            <div style={tableWrapper} className="table-wrapper">
                 <table className="table table-bordered table-striped table-sm table-hover-info">
                     <thead>
                         <tr>
