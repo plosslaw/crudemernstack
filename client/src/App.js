@@ -17,7 +17,7 @@ class App extends React.Component{
                 salary: "",
                 job: ""
             },
-            message: ""
+            message: "",
         }
         this.deleteHandler = this.deleteHandler.bind(this)
         this.addHandler = this.addHandler.bind(this)
@@ -25,6 +25,7 @@ class App extends React.Component{
         this.handleChange = this.handleChange.bind(this)
         this.showEditForm = this.showEditForm.bind(this)
         this.returnForm = this.returnForm.bind(this)
+        this.tableElement = React.createRef()
     }
     
     componentDidMount(){
@@ -33,6 +34,7 @@ class App extends React.Component{
         })
     }
 
+
     resetForm(){
         this.setState({
             employee:{
@@ -40,8 +42,9 @@ class App extends React.Component{
                 lastName: "",
                 salary: "",
                 job: ""
-            }
+            },
         })
+        this.tableElement.current.parentRemoveHighlight()
     }
 
     handleChange(e){
@@ -56,8 +59,10 @@ class App extends React.Component{
     showEditForm(employee){
         this.setState({
             isEditForm: true,
-            employee : employee
+            employee : employee,
+            message:"",
         })
+        this.tableElement.current.parentRemoveHighlight()
     }
 
     async deleteHandler(id){
@@ -115,7 +120,8 @@ class App extends React.Component{
             return (
                 <EmployeeTable employees={this.state.employees}
                             deleteHandler={this.deleteHandler}
-                            showEditForm={this.showEditForm}/>
+                            showEditForm={this.showEditForm}
+                            ref={this.tableElement}/>
             )
         }
         return null; 
@@ -149,13 +155,13 @@ class App extends React.Component{
                     fontFamily:["Verdana", "sans-serif"]
                 }}>Employee Database</h1>
                 <div className="row">
-                    <div className="col"></div>
-                    <div className="col-10">
+                    <div className="col-large-side col-md "></div>
+                    <div className="col-large-center col-md-10">
                         {this.renderEmployeeTable()}
                         {this.renderForm()}
                         {this.renderMessage()}
                     </div>
-                    <div className="col"></div>
+                    <div className="col-large-side col-md"></div>
                 </div>
             </>
         )

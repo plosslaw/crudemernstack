@@ -9,3 +9,35 @@
     background-color: rgba(0, 0, 0, .5);
     box-shadow: 0 0 1px rgba(255, 255, 255, .5);
   }
+
+  @media (min-width: 1600px) {
+    /* colours for debugging each region */
+    .col-large-side {
+      max-width: 22.5% !important;
+      float: left;
+      /* background-color: red; */
+    }
+    .col-large-center{
+      max-width: 55% !important;
+      float: left;
+      /* background-color:yellowgreen; */
+    }
+  }
+
+  table{
+    table-layout: fixed;
+  }
+  @media (max-width: 1200px){
+    .btn-responsive {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      line-height: 1.5 !important;
+    }
+  }
+  @media (max-width: 800px){
+    .btn-responsive {
+      border-radius: 0.2rem !important;
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+  }

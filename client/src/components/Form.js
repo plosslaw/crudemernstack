@@ -2,9 +2,9 @@ import React from 'react'
 import Input from  './Input'
 
 const Form = (props)=>{
-    let backButton={
-        display : !props.isEditForm ? "visible" : "none"
-    }
+    // let backButton={
+    //     display : props.isEditForm ? "visible" : "none"
+    // }
     return (
         <form className="mt-4" onSubmit={props.handler}>
             <h4>{props.isEditForm ? "Edit Employee" : "Add Employee"}</h4>
@@ -32,7 +32,8 @@ const Form = (props)=>{
                         value={props.employee.salary}/>
             </div>
             <button type="submit" className="btn btn-primary btn-block">Submit</button>
-            <button style={backButton} onClick={props.resetForm} className="btn btn-secondary btn-block">Back</button>
+            {props.isEditForm &&
+                <button onClick={props.returnForm} className="btn btn-secondary btn-block">Back</button>}
 
         </form>
     )
