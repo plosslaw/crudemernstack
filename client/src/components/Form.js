@@ -2,9 +2,13 @@ import React from 'react'
 import Input from  './Input'
 
 const Form = (props)=>{
+    let backButton={
+        display : !props.isEditForm ? "visible" : "none"
+    }
     return (
-        <form onSubmit={props.handler}>
+        <form className="mt-4" onSubmit={props.handler}>
             <h4>{props.isEditForm ? "Edit Employee" : "Add Employee"}</h4>
+            <div className="font-weight-light mb-2">(Input is auto-capitalized)</div>
             <div className="form-group">
                 <Input name="firstName"
                         placeholder="Enter First Name"
@@ -27,7 +31,8 @@ const Form = (props)=>{
                         handleChange={props.handleChange}
                         value={props.employee.salary}/>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary btn-block">Submit</button>
+            <button style={backButton} onClick={props.resetForm} className="btn btn-secondary btn-block">Back</button>
 
         </form>
     )

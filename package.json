@@ -13,13 +13,12 @@
     "install-all": "concurrently \"npm run client-install\" \"npm run server-install\" ",
     "dev": "concurrently \"npm run client\" \"npm run server\" ",
     "heroku-postbuild": "cd client && npm install && npm run build"
-
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.9.5"
   }

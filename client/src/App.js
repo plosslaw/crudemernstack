@@ -24,7 +24,7 @@ class App extends React.Component{
         this.updateHandler = this.updateHandler.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.showEditForm = this.showEditForm.bind(this)
-        
+        this.returnForm = this.returnForm.bind(this)
     }
     
     componentDidMount(){
@@ -89,6 +89,12 @@ class App extends React.Component{
         this.resetForm()
     }
 
+    returnForm(e){
+        e.preventDefault()
+        this.setState({isEditForm: false})
+        this.resetForm()
+    }
+
     async addHandler(e){
         e.preventDefault()
         const postData = await EmployeeAPI.createEmployee(this.state.employee)
@@ -120,7 +126,8 @@ class App extends React.Component{
             <Form  isEditForm={this.state.isEditForm}
                     employee={this.state.employee}
                     handleChange={this.handleChange}
-                    handler={!this.state.isEditForm ? this.addHandler : this.updateHandler}/>
+                    handler={!this.state.isEditForm ? this.addHandler : this.updateHandler}
+                    returnForm={this.returnForm}/>
         )
     }
 
@@ -137,7 +144,10 @@ class App extends React.Component{
     render(){
         return(
             <>
-                <h1>Employee Database</h1>
+                <h1 className="text-center mb-3 mt-2" style={{
+                    color: 'coral',
+                    fontFamily:["Verdana", "sans-serif"]
+                }}>Employee Database</h1>
                 <div className="row">
                     <div className="col"></div>
                     <div className="col-10">

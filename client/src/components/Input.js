@@ -10,7 +10,7 @@ const Input = (props)=>{
         <>
         <label htmlFor={props.name}>{props.labelName} </label>
         <input type="text" 
-            className="form-control" 
+            className="form-control mb-1" 
             name={props.name} 
             placeholder={props.placeholder}
             onChange={props.handleChange}
