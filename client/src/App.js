@@ -136,15 +136,18 @@ class App extends React.Component{
 
     render(){
         return(
-            <div className="row">
-                <div className="col"></div>
-                <div className="col-10">
-                    {this.renderEmployeeTable()}
-                    {this.renderForm()}
-                    {this.renderMessage()}
+            <>
+                <h1>Employee Database</h1>
+                <div className="row">
+                    <div className="col"></div>
+                    <div className="col-10">
+                        {this.renderEmployeeTable()}
+                        {this.renderForm()}
+                        {this.renderMessage()}
+                    </div>
+                    <div className="col"></div>
                 </div>
-                <div className="col"></div>
-            </div>
+            </>
         )
     }
 }
