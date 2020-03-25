@@ -36,7 +36,6 @@ class App extends React.Component{
         })
     }
 
-
     resetForm(){
         this.setState({
             employee:{

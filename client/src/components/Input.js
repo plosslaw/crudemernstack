@@ -9,12 +9,19 @@ const Input = (props)=>{
     return (
         <>
         <label htmlFor={props.name}>{props.labelName} </label>
-        <input type="text" 
-            className="form-control mb-1" 
-            name={props.name} 
-            placeholder={props.placeholder}
-            onChange={props.handleChange}
-            value={capitalized}></input>
+        <div className="input-group">
+            {props.name === "salary" && 
+                <div className="input-group-prepend mb-1">
+                <span className="input-group-text">$</span>
+                </div>
+            }
+            <input type="text" 
+                className="form-control mb-1" 
+                name={props.name} 
+                placeholder={props.placeholder}
+                onChange={props.handleChange}
+                value={capitalized}></input>
+        </div>
         </>
     )
 

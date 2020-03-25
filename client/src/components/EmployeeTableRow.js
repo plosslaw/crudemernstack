@@ -11,8 +11,14 @@ class EmployeeTableRow extends React.Component{
     editForm(event){
         this.props.showEditForm(this.props.employee, event)
         // this.props.parentRemoveHighlight(event)
-        this.setState({tabHighlight:"table-primary"})
+        this.setState({tabHighlight:"table-danger"})
     }
+
+    deleteEntry(event){
+        const info = `${this.props.employee.firstName} ${this.props.employee.lastName} (${this.props.employee.job})`
+        this.props.deleteHandler(this.props.employee._id, info, event)
+    }
+
     removeHighlight(){
         this.setState({tabHighlight:""})
     }
@@ -28,16 +34,16 @@ class EmployeeTableRow extends React.Component{
         // }
         return(
             <tr className={this.state.tabHighlight}>
-                <th style={{overflowX: "scroll"}} className="text-capitalize">{firstName}</th>
-                <th style={{overflowX: "scroll"}} className="text-capitalize">{lastName}</th>
+                <td style={{overflowX: "scroll", fontWeight:"bold"}} className="text-capitalize">{firstName}</td>
+                <td style={{overflowX: "scroll", fontWeight:"bold"}} className="text-capitalize">{lastName}</td>
                 <td style={{overflowX: "scroll"}} className="text-capitalize">{job}</td>
                 <td style={{overflowX: "scroll"}}>{salaryindollars}</td>
                 <td style={{overflowX: "scroll"}}>{_id}</td>
                 <td>
                     <div style={{display:"flex", justifyContent: "center"}}>
-                    <div className="btn-group flex-wrap" role="group">
+                    <div className="btn-group flex-wrap" role="group" style={{position:"relative"}}>
                         <button type="button" onClick={(e)=>this.editForm(e)} className="btn btn-secondary btn-responsive">Edit</button>
-                        <button type="button" onClick={this.props.deleteHandler.bind(this, _id)} className=" btn btn-danger btn-responsive">Delete</button>
+                        <button type="button" onClick={(e)=>this.deleteEntry(e)} className=" btn btn-danger btn-responsive">Delete</button>
                     </div>
                     </div>
                 </td>

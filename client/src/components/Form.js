@@ -5,11 +5,11 @@ const Form = (props)=>{
     // let backButton={
     //     display : props.isEditForm ? "visible" : "none"
     // }
-    return (
+        return (
         <form className="mt-4" onSubmit={props.handler}>
-            <h4>{props.isEditForm ? "Edit Employee" : "Add Employee"}</h4>
-            <div className="font-weight-light mb-2">(Input is auto-capitalized)</div>
-            <div className="form-group">
+                <h4>{props.isEditForm ? "Edit Employee" : "Add Employee"}</h4>
+                <div className="font-weight-light mb-2">(Input is auto-capitalized)</div>
+                <div className="form-group">
                 <Input name="firstName"
                         placeholder="Enter First Name"
                         labelName="First Name: "
@@ -30,13 +30,13 @@ const Form = (props)=>{
                         labelName="Salary: "
                         handleChange={props.handleChange}
                         value={props.employee.salary}/>
-            </div>
-            <button type="submit" className="btn btn-primary btn-block">Submit</button>
-            {props.isEditForm &&
+                </div>
+                <button type="submit" className="btn btn-danger btn-block">Submit</button>
+                {props.isEditForm &&
                 <button onClick={props.returnForm} className="btn btn-secondary btn-block">Back</button>}
 
         </form>
-    )
+        )
 }
 
 
