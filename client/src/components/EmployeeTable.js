@@ -58,7 +58,7 @@ class EmployeeTable extends React.Component{
             <>
                 <div style={{display:"flex", flexDirection:"row-reverse", marginBottom:"0.2rem"}}>
                     <div>
-                        <span className="mr-2 small" style={{color:"red", fontFamily:"Helvetica", fontSize:"1rem", fontWeight:"bold"}}>Display warning:</span>
+                        <span className="mr-2 small" style={{color:"red", fontFamily:"Helvetica", fontSize:"1rem", fontWeight:"bold"}}>Display delete warning:</span>
                         <label className="switch">
                             <input type="checkbox" onClick={()=>this.toggleWarning()}/>
                             <span className="slider"></span>

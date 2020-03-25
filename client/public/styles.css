@@ -10,6 +10,17 @@
     box-shadow: 0 0 1px rgba(255, 255, 255, .5);
   }
 
+  .warning-modal{
+    font-size:2rem;
+    text-align:center;
+    overflow-x:scroll;
+    padding-bottom: 0.2rem;
+    /* overflow-y:; */
+    max-height:200px
+  }
+
+
+
   @media (min-width: 1600px) {
     /* colours for debugging each region */
     .col-large-side {

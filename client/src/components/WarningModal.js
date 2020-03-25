@@ -30,13 +30,15 @@ class WarningModal extends React.Component{
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <h5 style={headerStyle}>Are you sure you want to delete</h5> 
-                        <h5 style={{fontSize:"2rem", textAlign:"center"}} >{`${this.props.deleteEntryName}`}</h5>
-                        <h5 style={headerStyle}>from the database?</h5>
-                        <p style={{fontSize:"0.8rem", color:"grey", marginTop:5}}>
-                            This operation is cannot be undone, 
-                            deleted entries have to be reinserted back into the database manually
-                        </p>
+                        <div>
+                            <h5 style={headerStyle}>Are you sure you want to delete</h5> 
+                            <h5 className="warning-modal" >{`${this.props.deleteEntryName}`}</h5>
+                            <h5 style={headerStyle}>from the database?</h5>
+                            <p style={{fontSize:"0.8rem", color:"grey", marginTop:5}}>
+                                This operation is cannot be undone, 
+                                deleted entries have to be reinserted back into the database manually
+                            </p>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="danger" onClick={(e)=>this.deleteAndDismissModal(e)}>Delete</Button>
