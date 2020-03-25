@@ -56,10 +56,10 @@ class EmployeeTable extends React.Component{
         }
         return(
             <>
-                <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.7rem"}}>
-                    <h6>*This datatable is responsive to screen size</h6>
+                <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.2rem"}}>
+                    <div className="small" style={{fontWeight:"bold", fontSize:"1rem"}}>*This datatable is responsive to screen size</div>
                     <div>
-                        <span className="mr-2" style={{color:"red", fontFamily:"Helvetica"}}>Display warning:</span>
+                        <span className="mr-2 small" style={{color:"red", fontFamily:"Helvetica", fontSize:"1rem", fontWeight:"bold"}}>Display warning:</span>
                         <label className="switch">
                             <input type="checkbox" onClick={()=>this.toggleWarning()}/>
                             <span className="slider"></span>
