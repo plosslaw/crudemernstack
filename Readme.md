@@ -1,4 +1,4 @@
-#Employee Database
+# Employee Database
 
 This application is built using the MERN (Mongo, Express, React, Node) stack
 
