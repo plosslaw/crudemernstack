@@ -56,8 +56,7 @@ class EmployeeTable extends React.Component{
         }
         return(
             <>
-                <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.2rem"}}>
-                    <div className="small" style={{fontWeight:"bold", fontSize:"1rem"}}>*This datatable is responsive to screen size</div>
+                <div style={{display:"flex", flexDirection:"row-reverse", marginBottom:"0.2rem"}}>
                     <div>
                         <span className="mr-2 small" style={{color:"red", fontFamily:"Helvetica", fontSize:"1rem", fontWeight:"bold"}}>Display warning:</span>
                         <label className="switch">
@@ -92,6 +91,7 @@ class EmployeeTable extends React.Component{
                         </tbody>
                     </table>
                 </div>
+                <div className="small mt-2 mb-2" style={{fontWeight:"bold", fontSize:"1rem"}}>*This datatable is responsive to screen size</div>
                 <WarningModal
                     show={this.state.modalShow}
                     onHide={() => this.setModalShow(false)}
