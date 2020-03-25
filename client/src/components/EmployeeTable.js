@@ -91,7 +91,7 @@ class EmployeeTable extends React.Component{
                         </tbody>
                     </table>
                 </div>
-                <div className="small mt-2 mb-2" style={{fontWeight:"bold", fontSize:"1rem"}}>*This datatable is responsive to screen size</div>
+                <div className="small" style={{fontWeight:"bold", fontSize:"1rem"}}>*This datatable is responsive to screen size</div>
                 <WarningModal
                     show={this.state.modalShow}
                     onHide={() => this.setModalShow(false)}
