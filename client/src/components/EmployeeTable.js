@@ -51,7 +51,6 @@ class EmployeeTable extends React.Component{
 
     render(){
         const tableWrapper = {
-            overflowX: "scroll",
             overflowY: "scroll",
             width:"100%",
             maxHeight:"400px",
