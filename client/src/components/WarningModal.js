@@ -15,7 +15,7 @@ class WarningModal extends React.Component{
     
     render(){
         const childProps = {show:this.props.show, onHide:this.props.onHide}
-        const headerStyle={color:"red", textAlign:"center"}
+        const headerStyle={color:"red", textAlign:"center", paddingBottom:"0.2rem"}
         return (
             <>
                 <Modal
@@ -32,9 +32,9 @@ class WarningModal extends React.Component{
                     <Modal.Body>
                         <div>
                             <h5 style={headerStyle}>Are you sure you want to delete</h5> 
-                            <h5 className="warning-modal" >{`${this.props.deleteEntryName}`}</h5>
+                            <h5 className="warning-modal">{`${this.props.deleteEntryName}`}</h5>
                             <h5 style={headerStyle}>from the database?</h5>
-                            <p style={{fontSize:"0.8rem", color:"grey", marginTop:5}}>
+                            <p style={{fontSize:"0.8rem", color:"grey", marginTop:"0.8rem"}}>
                                 This operation is cannot be undone, 
                                 deleted entries have to be reinserted back into the database manually
                             </p>
