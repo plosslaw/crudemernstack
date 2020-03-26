@@ -8,7 +8,7 @@ const Form = (props)=>{
         return (
         <form className="mt-4" onSubmit={props.handler}>
                 <h4>{props.isEditForm ? "Edit Employee" : "Add Employee"}</h4>
-                <div className="font-weight-light mb-2">(Input is auto-capitalized)</div>
+                <div className="font-weight-light mb-2" style={{fontSize:"1.5vmin"}}>(Input is auto-capitalized; typing too quickly may result in input not getting captured)</div>
                 <div className="form-group">
                 <Input name="firstName"
                         placeholder="Enter First Name"
