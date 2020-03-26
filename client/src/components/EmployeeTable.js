@@ -16,9 +16,11 @@ class EmployeeTable extends React.Component{
         this.deleteHandlerWithModal = this.deleteHandlerWithModal.bind(this)
     }
     parentRemoveHighlight = () =>{
-        this.refArray.forEach(element => {
-            element.removeHighlight()
-        });
+        if(this.refArray!== null && this.refArray.length>0){
+            this.refArray.forEach(element => {
+                element.removeHighlight()
+            });
+        }
     }
 
     setModalShow(visible){
