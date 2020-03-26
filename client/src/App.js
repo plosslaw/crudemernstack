@@ -152,7 +152,7 @@ class App extends React.Component{
             <>
                 <h1 className="text-center mb-3 mt-2" style={{
                     color: 'coral',
-                    fontFamily:["Verdana", "sans-serif"]
+                    fontFamily:["Barlow", "sans-serif"]
                 }}>Employee Database</h1>
                 <div className="row">
                     <div className="col-large-side col-md "></div>
