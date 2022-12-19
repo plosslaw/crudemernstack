@@ -11,3 +11,5 @@ Simple CRUD operations supported:
 
 </ul>
 Try it out here https://crudemernstack.herokuapp.com/
+
+heroku-22 stack
