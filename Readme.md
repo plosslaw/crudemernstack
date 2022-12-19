@@ -15,13 +15,14 @@ Try it out here ~~https://crudemernstack.herokuapp.com/~~ (Heroku no longer prov
 
 ## Build and Run
 
-Start Client (Stay at root folder `crudemernstack`):
+### Start Client (Stay at root folder `crudemernstack`):
 
 Build: `npm install`
 
 Run: `npm run start`
 
-Start Client (Go to `crudemernstack/client`):
+
+### Start Client (Go to `crudemernstack/client`):
 
 Build: `npm install`
 
