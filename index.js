@@ -23,8 +23,8 @@ mongoose.connect(uri, {
     useFindAndModify: false
 },(err)=>{
     if(err){
-        process.exit(1)
         console.log('unable to connect to db')
+        process.exit(1)
     }else{
         console.log('successfully connected to db')
     }
