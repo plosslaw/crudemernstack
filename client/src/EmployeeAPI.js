@@ -1,4 +1,4 @@
-export default{
+const EmployeeAPI = {
     getEmployees: ()=>{
         return fetch('/employee')
             .then(res => res.json())
@@ -10,7 +10,7 @@ export default{
             .then(data=> data)
     },
     createEmployee: (employee)=>{
-        return fetch('/employee', 
+        return fetch('/employee',
         {
             method:'post',
             body: JSON.stringify(employee),
@@ -31,4 +31,6 @@ export default{
             .then(res=>res.json())
             .then(data=>data)
     }
-}
+};
+
+export default EmployeeAPI
